@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <h1>KOD DO ZAD. 31</h1>
+        <textarea>
+            <html>
+                <head>
+                   
+                <script type="text/javascript">
+                var mebel = {
+                   Rodzaj: 'Krzesło',
+                   Materiał: 'Drewno',
+                   kolor: 'brązowy',
+               
+                   mebel_pokaz_Szpinek: function ()
+                   {
+                    document.write(this.Rodzaj + ', ' + this.Materiał + ', ' + this.kolor) 
+                   }
+               }
+                mebel.mebel_pokaz_Szpinek();
+                mebel.koszt=2137
+                mebel.wypisz=function() {alert('Koszt: ' + this.koszt + 'zł')};
+                mebel.wypisz();
+                </script>
+                </head>
+               <body>
+                   <style>
+                       body{
+                          font-size: 10 px;
+                          font-weight:bold;}
+                      </style>
+               
+               <br><br>
+               
+                Programowanie obiektowe. <br>
+                Obiekt to mebel<br>
+                Pola:<br>
+                   Rodzaj<br>
+                   Material<br>
+                Kolor<br>
+                metoda: mebel_pokaz_Szpinek<br>
+                nowa metoda to mebel.wypisz();<br>
+               </body>
+               </html>
+        </textarea>
+    </body>
+</html>

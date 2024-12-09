@@ -1,0 +1,41 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function mebel(Rodzaj_m,Materiał_m,Kolor_m,Cena_m)//początek konstruktora
+{
+this.Rodzaj = Rodzaj_m;
+this.Materiał = Materiał_m;
+this.Kolor = Kolor_m;
+this.Cena = Cena_m;
+
+}//koniec konstruktora
+
+ mebel.prototype.wypisz = function () //definicja metody
+ {
+ alert(this.Rodzaj + ', ' + this.Materiał+ ', ' + this.Kolor + ', ' + this.Cena);
+ };
+
+var mebel1 = new mebel("Krzesło", "Drewno", "beżowy","2137"); // nowy obiekt osoba1
+var mebel2 = new mebel('Stół', 'Aluminium', 'czarny',"690");
+var mebel3 = new mebel('Biórko', 'Drewno', 'szary',"420");
+mebel1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+mebel2.wypisz();
+mebel3.wypisz();
+ document.write("dostęp do właściwości"+"<br>");
+// poniżej dostęp do pól osoby1
+ document.write("Mebel        Rodzaj            Materiał            Kolor            Cena(zł)"+"<BR>");
+ document.write("1) mebel:"+" "+mebel1.Rodzaj+" "+mebel1.Materiał+" "+mebel1.Kolor+" "+mebel1.Cena+"<br>");
+ document.write("2) mebel:"+" "+mebel2.Rodzaj+" "+mebel2.Materiał+" "+mebel2.Kolor+" "+mebel2.Cena+"<br>");
+ document.write("3) mebel:"+" "+mebel3.Rodzaj+" "+mebel3.Materiał+" "+mebel3.Kolor+" "+mebel3.Cena);
+ </script>
+ </head>
+<body>
+    <style>
+        body{
+           font-size: 10 px;
+           font-weight:bold;}
+       </style>
+<br>
+ programowanie obiektowe 
+</body>
+</html>
