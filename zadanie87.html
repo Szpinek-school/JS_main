@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+ 
+<head>
+    <title>Logowanie</title>
+    <script>
+        function access_control() {
+            let password = "1234";  
+            let user_password = document.getElementById("password").value;  
+ 
+            if (user_password === password) {
+                document.getElementById("result").innerHTML = '<p style="color: green;">Poprawne hasło! Zostaniesz przekierowany.</p>';
+                setTimeout(accepted, 2000); 
+            } else {
+                document.getElementById("result").innerHTML = '<p style="color: red;">Złe hasło!</p>';
+            }
+        }
+ 
+        function accepted() {
+            window.location.replace("tajna_strona.html");
+        }
+    </script>
+</head>
+ 
+<body>
+    <input type="password" id="password" placeholder="Wprowadź hasło">
+    <button onclick="access_control()">OK</button>
+    <div id="result"></div>
+</body>
+ 
+</html>
+

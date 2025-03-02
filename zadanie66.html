@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie 66</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<table id="tabela">
+    <tr>
+        <td><img src="img1.jpg"></td>
+        <td><img src="img2.jpg"></td>
+        <td><img src="img3.jpg"></td>
+    </tr>
+    <tr>
+        <td><img src="img4.jpg"></td>
+        <td><img src="img5.jpg"></td>
+        <td><img src="img6.jpg"></td>
+    </tr>
+    <tr>
+        <td><img src="img7.jpg"></td>
+        <td><img src="img8.jpg"></td>
+        <td><img src="img9.jpg"></td>
+    </tr>
+</table>
+
+<script>
+    // Tablica z obrazkami
+    let obrazy = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg"];
+
+    function zmienObrazki() {
+        let wszystkieImg = document.querySelectorAll("td img");
+
+        wszystkieImg.forEach((img) => {
+            let losowyIndex = Math.floor(Math.random() * obrazy.length);
+            img.src = obrazy[losowyIndex]; // Zmiana źródła obrazka
+        });
+    }
+
+    setInterval(zmienObrazki, 2000); // Zmiana obrazków co 2 sekundy
+</script>
+
+</body>
+</html>

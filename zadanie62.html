@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabele zadanie 62 & 63</title>
+</head>
+
+<body>
+    <script>
+        var Tab = new Array('Gdańsk', 'Gdynia', 'Sopot', 'Warszawa', 'Wrocław', 'Kraków', 'Poznań');
+        for (i = 0; i < Tab.length; i++) {
+            document.write(Tab[i] + "<br>");
+
+        }
+
+        Tab.push('Częstochowa');
+        document.write("<b><h3>po dodaniu komendą tablica.push() </h3></b>")
+
+        for (i = 0; i < Tab.length; i++) {
+            document.write(Tab[i] + "<br>");
+        }
+
+
+        Tab.shift(0);
+        document.write("<b><h3>usuniecie 0 elementu tablicy komendą tablica.shift(0) </h3></b>")
+
+        for (i = 0; i < Tab.length; i++) {
+            document.write(Tab[i] + "<br>");
+        }
+
+        Tab.reverse();
+        document.write("<b><h3>odwrócenie kolejności tablicy komendą tablica.reverse() </h3></b>")
+
+        for (i = 0; i < Tab.length; i++) {
+            document.write(Tab[i] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

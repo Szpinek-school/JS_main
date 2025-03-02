@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>Moja strona WWW</title> 
+    <script type="text/javascript"> 
+    function page1() 
+    { 
+      window.location.replace("cke.pl");  
+    } 
+    function open_page1(){
+        setTimeout("page1();", 4000);
+    }
+
+    function page2() 
+    { 
+      window.location.replace("gdansk.pl"); 
+    } 
+    function open_page2(){
+        setTimeout("page2();", 6000); 
+
+    }
+    
+    function open_page3() 
+    { 
+      window.location.replace("lechia.pl"); 
+    } 
+    function open_page3(){
+        setTimeout("page3();", 10000);
+    }
+    
+
+    function page4() 
+    { 
+      window.location.replace("file:///F:/Szko%C5%82a/JS_1-5-main/zadanie77.html");  
+    } 
+    function open_page4(){
+        setTimeout("page4();", 8000);
+    }
+    
+   
+    </script> 
+  </head> 
+  <body> 
+    <button onclick="open_page1()">strona cke za 4s</button>
+    <button onclick="open_page2()">strona miassta Gdańska za 6s</button>
+    <button onclick="open_page3()">strona Lechii Gdańsk za 10s</button>
+    <button onclick="open_page4()">odświeżenie strony za 8s</button>
+   
+  </body> 
+  </html>

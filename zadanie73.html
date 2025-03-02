@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<!-- metatagi --> 
+<head> 
+<script type="text/javascript"> 
+function wyswietlDate(){ 
+    let Today = new Date(); 
+    let Month = (Today.getMonth()+1); 
+    let Day = Today.getDate(); 
+    let Year = Today.getFullYear(); 
+       if(Year <= 99)    Year += 1900 
+    return  Day + "-" + Month + "-" + Year; 
+} 
+</script> 
+</head> 
+<body> 
+ <script type="text/javascript"> 
+       document.write("Dzisiaj jest " + wyswietlDate()); 
+  </script> 
+</body> 
+</html> 

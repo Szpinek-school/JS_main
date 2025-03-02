@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+</head>
+<div style="font-size:30px;">
+
+    <body>
+        <script>
+            let tablica = [];
+
+            for (let i = 0; i < 3; i++) {
+                tablica[i] = [];
+                for (let j = 0; j < 3; j++) {
+                    let wartosc = prompt(`Podaj wartość dla [${i}][${j}]:`);
+                    tablica[i][j] = parseFloat(wartosc);
+                }
+            }
+
+            function Oblicz_wyznacznik(macierz) {
+                return (
+                    (macierz[0][0] * macierz[1][1] * macierz[2][2]) + (macierz[0][1] * macierz[1][2] * macierz[2][0]) +
+                    (macierz[0][2] * macierz[1][0] * macierz[2][1]) - (macierz[0][2] * macierz[1][1] * macierz[2][0]) -
+                    (macierz[0][0] * macierz[1][2] * macierz[2][1]) - (macierz[0][1] * macierz[1][0] * macierz[2][2])
+                );
+            }
+
+            let wyznacznik = Oblicz_wyznacznik(tablica);
+
+            document.write("<table border='0' style= text-align: center;'>");
+
+            for (let i = 0; i < 3; i++) {
+                document.write("<tr>");
+                for (let j = 0; j < 3; j++) {
+                    document.write(`<td style="padding: 7px;">${tablica[i][j]}</td>`);
+                }
+                document.write("</tr>");
+            }
+
+            document.write("</table>" + "<br>");
+
+            document.write(`(${tablica[0][0]} * ${tablica[1][1]} * ${tablica[2][2]}) + (${tablica[0][1]} * ${tablica[1][2]} * ${tablica[2][0]}) +
+                    (${tablica[0][2]} * ${tablica[1][0]} * ${tablica[2][1]}) - (${tablica[0][2]} * ${tablica[1][1]} * ${tablica[2][0]}) -
+                    (${tablica[0][0]} * ${tablica[1][2]} * ${tablica[2][1]}) - (${tablica[0][1]} * ${tablica[1][0]} * ${tablica[2][2]}) = ${wyznacznik}`);
+
+        </script>
+    </body>
+</div>
+
+</html>

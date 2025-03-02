@@ -1,0 +1,81 @@
+<html>
+<body>
+<p>
+   <h2>Zad. 86</h2>
+Zadanie na praktyczne na  <br>
+String —  łańcuch  tekstowy.  Posiada  własność  length i  metody:  slice(),  split(). <br>
+Obiekt String <br>
+Obiektem zawsze występującym w języku JavaScript jest obiekt String. Posiada on jedną <br>
+właściwość,  <br>
+length, określającą długość łańcucha. <br>
+Przykład <br>
+tekst = "Obiekty języka JavaScript" <br>
+dl = tekst.length <br>
+Zmiennej dl przypisana zostanie wartość 25, określająca długość tekstu. <br>
+Obiekt String posiada dwa typy metod. <br>
+Typ1 <br>
+metoda substring(), która  zwraca  podzbiór  tego  łańcucha.  Jej  parametry  określają  położenie  <br>
+początku i końca podzbioru. <br>
+Przykład <br>
+x = tekst.substring (15,19) <br>
+Zostanie zwrócony łańcuch Java. <br>
+Typ2 <br>
+Metoda toUpperCase() zamienia wszystkie litery ciągu na duże, <br> 
+Metoda toLowerCase() zamienia wszystkie litery ciągu na małe. <br>
+Przykład <br>
+tekst = "Obiekty języka JavaScript" <br>
+x = tekst.toLowerCase() <br>
+/*Zostanie zwrócony łańcuch obiekty języka javascript */ <br>
+Przykład <br>
+tekst = "Obiekty języka JavaScript" <br>
+x = tekst.toUpperCase() <br>
+/*Zostanie zwrócony łańcuch OBIEKTY JĘZYKA JAVASCRIPT*/ <br>
+Przykład <br>
+Temat: Jak wykonać aby pierwsza litera ciągu znaków była pisana dużą literą. <br>
+Wykonanie:<br>
+ Do istniejących obiektów można dodawać nowe właściwości i można definiować dla nich nowe <br>
+metody. Do obiektu String dodamy dodatkową funkcjonalność, dzięki której pierwsza litera  <br>
+łańcucha będzie pisana dużą literą. <br>
+String.prototype.duzaLitera = function() { return this.charAt(0).toUpperCase() + this.substr(1) <br>
+Opis działania zdefiniowanej powyżej metody <br>
+117 <br>
+Metoda charAt() zwraca znak z pierwszej pozycji łańcucha znaków. Metoda substr() zwraca  <br>
+podzbiór  łańcucha  znaków.  Jako  parametr  tej  metody  został  podany  indeks pierwszego  <br>
+znaku  podzbioru.  Zadeklarowana  metoda  została  dołączona  do  obiektu  String i od tej pory <br>
+każdy nowy tekst będzie posiadał metodę, która zamieni jego pierwszą literę na dużą. <br>
+Przykład <br>
+Temat: Zamiana pierwszej litery na dużą. <br>
+var tx1 = 'komputer'; <br>
+document.write(tx1.duzaLitera()) <br>
+W wyniku wykonania skryptu wyświetli się tekst 'Komputer'. <br>
+Obiekt Date <br>
+Obiekt specjalny Date, który służy do przechowywania  wartości  daty  i  czasu.  Przy  jego  <br>
+pomocy  można  odczytać  wartość  daty  i czasu, można też rozłożyć te wartości na części, <br>
+odczytując oddzielnie dzień, miesiąc, rok itp. Można również te części niezależnie modyfikować. <br>
+Przykład <br>
+Temat: Odczytanie bieżącej datę i czas do zmiennej dat_cz. <br>
+var dat_cz = new Date(); <br>
+Przykład <br>
+Temat:Utworzenie obiektu, który będzie zawierał ściśle określoną wartość daty i godziny. <br>
+var data = new Date(2018,2,27); <br>
+Opis: <br>
+Można utworzyć obiekt z określoną liczbą parametrów. Tych parametrów może być od  <br>
+dwóch do siedmiu (rok, miesiąc, dzień, godzina, minuty, sekundy, milisekundy). <br>
+W języku JavaScript wartości daty i czasu są przechowywane w formacie timestamp, czyli jako <br>
+liczba milisekund, które upłynęły od północy 1 stycznia 1970 roku. <br>
+Do konwersji obiektu Date na tekst służy kilka funkcji: <br>
+toString() —  zwraca  datę,  czas  oraz  informacje  o  strefie  czasowej  w  języku   <br>
+angielskim, <br>
+toLocaleString() — zwraca datę i czas dla bieżących ustawień regionalnych, <br>
+toUTCString()— zwraca datę, czas oraz informacje o strefie czasowej dla formatu  <br>
+UTC (Universal Coordinated Time), <br>
+toGMTString()— działa jak funkcja toUTCString(), <br>
+toDateString()— zwraca tylko datę w języku angielskim, <br>
+toLocaleDateString() —  zwraca  tylko  datę  dla  bieżących  ustawień  regionalnych, <br>
+toTimeString()— zwraca tylko czas w języku angielskim, <br>
+toLocaleTimeString()— zwraca tylko czas dla bieżących ustawień regionalnych. <br>
+UWAGA <br>
+Dla  metod toString() i  toLocaleString() różne przeglądarki zwracają wyniki w różny sposób. <br>
+</p>
+</body>
+</html>

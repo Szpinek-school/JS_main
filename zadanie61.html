@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabele zadanie 61</title>
+</head>
+
+<body>
+    <input type="number" id="max" placeholder="wpisz max liczbe">
+    <button onclick="do_it()">ok</button>
+
+    <script>
+        function do_it(){
+            let max = document.getElementById("max").value
+            let Tab = new Array()
+            for (i = 0; i <= max; i++) {
+                if(i%3==0){
+                    Tab[i] = i;
+                    document.write("T[" + i + "]=" + Tab[i] + "<br>");
+                }
+            }
+           
+        }
+    </script>
+</body>
+
+</html>
